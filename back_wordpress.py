@@ -27,7 +27,7 @@ filename = date+site_name+'.tar.gz'					# Variable for the archive name uploaded
 logger = logging.getLogger ('backup_wp')								#MODIFY ME IF NECESSARY: Logging ID
 logger.setLevel(logging.INFO)										#MODIFY ME IF NECESSARY: General Logging level	
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')			#MODIFY ME IF NECESSARY: Logging message format
-logHandler = handlers.TimedRotatingFileHandler('~/Bureau/backup_wp.log', when='D', interval=1, backupCount=7)	#MODIFY ME IF NECESSARY: Create a new file each day for a maximum of 7 files
+logHandler = handlers.TimedRotatingFileHandler('/home/administrateur/Bureau/backup_wp.log', when='D', interval=1, backupCount=7)	#MODIFY ME IF NECESSARY: Create a new file each day for a maximum of 7 files
 logHandler.setLevel(logging.INFO)									#Logging level
 logHandler.setFormatter(formatter)									#Application of the format
 logger.addHandler(logHandler)										#Record of this logging file
