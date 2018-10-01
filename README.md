@@ -34,7 +34,7 @@ Voici une description des variables:
 - logger = logging.getLogger ('backup_wp')	-> Id de login (peut être ce que vous voulez, c'est juste pour s'y retrouver).
 - logger.setLevel(logging.INFO)	-> Le niveau de logging déclaré (je vous invite à consulter la documentation lié à la fonction logging de python avant de modifer ceci).
 - formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')	-> Le format du message écrit dans le fichier de log (Peut être modifier si vous savez ce que vous faites).
-- logHandler = handlers.TimedRotatingFileHandler('~/Bureau/backup_wp.log', when='D', interval=1, backupCount=7) -> Ce paramètre permet de définir combien de fichiers logs l'on veut, comment ils sont créés et leur localisation. Ici on crée un fichier par jour et on les garde 7 jours (donc 7 fichiers) ensuite les fichiers sont réécrits (peut être modifier si vous savez ce que vous faites).
+- logHandler = handlers.TimedRotatingFileHandler('/home/administrateur/Bureau/backup_wp.log', when='D', interval=1, backupCount=7) -> Ce paramètre permet de définir combien de fichiers logs l'on veut, comment ils sont créés et leur localisation. Ici on crée un fichier par jour et on les garde 7 jours (donc 7 fichiers) ensuite les fichiers sont réécrits (peut être modifier si vous savez ce que vous faites).
 - logHandler.setLevel(logging.INFO)	-> Niveau de logging pour les futurs logs (peut être modifier si vous savez ce que vous faites).
 - logHandler.setFormatter(formatter) -> Application du format choisi  (Pas de raison de modifier ceci).
 - logger.addHandler(logHandler) -> Enregistrement de la configuration précédente (peut être modifier si vous savez ce que vous faites).
