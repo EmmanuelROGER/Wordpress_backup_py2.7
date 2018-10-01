@@ -42,5 +42,5 @@ Voici une description des variables:
 
 Instructions d'installation:
 
-Comme précisé plus haut, ce script est fait pour être exécuté tous les jours par une tâche cron. Il est important de toujours utiliser le même utilisateur pour lancer ce script (pas besoin d'accès root) pour une question de droit sur les dossiers et fichiers et d'accès au fiochier de configuration boto3.
+Comme précisé plus haut, ce script est fait pour être exécuté tous les jours par une tâche cron. Il est important de toujours utiliser le même utilisateur pour lancer ce script (pas besoin d'accès root) pour une question de droit sur les dossiers et fichiers et d'accès au fichier de configuration boto3.
 Concernant la connexion à Amazon S3, il faut placer dans le répertoire home de l'utilisateur qui lance le script un dossier /.aws contenant un fichier credentials, je vous invite à consulter la documentation de boto3 pour aller plus loin. 
